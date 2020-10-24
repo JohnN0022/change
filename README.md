@@ -45,7 +45,7 @@ def cash_money():
     cash_money: float = 100.00  # float will include decimal spots for numbers
     return cash_money
 
-
+# start of the story
 def game_intro():  # story will begin after player choose 1
     print("The game you will be playing is an adventure game")
     print("and you are the hero of this story.")
@@ -65,7 +65,7 @@ def game_intro():  # story will begin after player choose 1
     print(hero_name, "will save you! ")
     return
 
-
+# bear stop hero from crossing
 def bear_story():
     global hero_health  # global variable
     global hero_coin  # global variable
@@ -106,7 +106,7 @@ def witch_attk():
     print(hero_name, '', hero_health, "hp.")
     return
 
-
+# witch disguise as real human
 def witch_story():
     global hero_health
     global hero_coin
@@ -153,11 +153,12 @@ def witch_story():
             fix_wagon = input("Invalid, Try again. Do you want to help fix "
                               "the wagon? Yes [1] or No [2]: ")
                               return
-                
+# question from vendor                
 def vendor_quiz():
     global hero_health
     global hero_coin
-    print("Question: Without using google, what is the output of 3**5.")
+    print("Question: Without using google, what is the output of 3**5.") 
+    # ** exponentiation operator where it take the first number and power to second number
     quiz_answer = input("243 [1] or 33333 [2] or 3535 [3]: ")
     while quiz_answer != 1 and quiz_answer != 2 and quiz_answer != 3:
         if quiz_answer == "2" or quiz_answer == "3":
@@ -215,7 +216,7 @@ def vendor_selling():
         buy_item = purchase_item.readline()
         print(str(item) + ". ", buy_item.rstrip())
 
-
+# price change if player answer question wrong
 def higher_price():
     purchase_item = open('p_resources\items2.txt') # open operator where
     # read txt file from your computer in which they have to be in the same
@@ -225,6 +226,7 @@ def higher_price():
         print(str(item) + ". ", buy_item.rstrip())
 
 
+# player/hero get to buy item from vendor
 def vendor_scam():
     global hero_health
     global hero_coin
