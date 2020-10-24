@@ -63,7 +63,6 @@ def game_intro():  # story will begin after player choose 1
     print("Who is going save them?")
     print(hero_name, "has arrived and here to save you from the evil man.")
     print(hero_name, "will save you! ")
-
     return
 
 
@@ -85,7 +84,6 @@ def bear_story():
                 hero_coin,
                 "0.2f"), sep='')
             # sep operator help separation between each comma
-
         elif attack_bear == "2":
             print(hero_name, "decided to run around the bear. But the bear "
                              "was fast and slashed hero's face.", hero_name,
@@ -151,12 +149,11 @@ def witch_story():
             # print("Sorry, I have to go save the world.",hero_name,
             # "left the scene.")
             return
-
         else:
             fix_wagon = input("Invalid, Try again. Do you want to help fix "
                               "the wagon? Yes [1] or No [2]: ")
-
-
+                              return
+                
 def vendor_quiz():
     global hero_health
     global hero_coin
@@ -167,8 +164,6 @@ def vendor_quiz():
             print("Sorry, you answer the question wrong.")
             print("You will have to pay a higher price for the item.")
             higher_price()
-
-
             return
         else:
             print("Congratution, you answer the question right is right.")
@@ -209,7 +204,6 @@ def vendor_quiz():
             else:
                 purchase_potion = input("Invalid, Try again. [1]. [2]. [3]. ["
                                         "4]: ")
-
             return
 
 # list of items that are in txt file and open operator call it
